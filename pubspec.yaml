@@ -1,0 +1,39 @@
+name: phishing_guard
+description: AI-based SMS phishing detector — default SMS app that blocks phishing texts before they reach the inbox.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Local storage for message history / quarantine
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  path_provider: ^2.1.1
+
+  # Networking (AI detection API call)
+  http: ^1.1.0
+
+  # Secure storage for API key
+  flutter_secure_storage: ^9.0.0
+
+  # State management (simple, low ceremony)
+  provider: ^6.1.1
+
+  # Permissions (READ_SMS, RECEIVE_SMS, etc.)
+  permission_handler: ^11.0.1
+
+  intl: ^0.18.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
